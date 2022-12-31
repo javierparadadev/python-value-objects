@@ -1,6 +1,5 @@
 from valueobjects.errors.ValueObjectError import ValueObjectError
 from valueobjects.numbers.int import Int
-from valueobjects.value_object import ValueObject
 
 
 class NegativeInt(Int):
