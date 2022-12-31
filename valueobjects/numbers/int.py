@@ -7,8 +7,8 @@ class Int(ValueObject):
     _ALLOWED_INPUT_TYPES = {str, int, float}
 
     def __init__(self, value: int | str | float):
-        self._validate(value)
         super().__init__(value)
+        self._validate(value)
 
     @classmethod
     def from_float(cls, value: float):
