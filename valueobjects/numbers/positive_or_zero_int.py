@@ -2,7 +2,7 @@ from valueobjects.errors.ValueObjectError import ValueObjectError
 from valueobjects.numbers.int import Int
 
 
-class NaturalNumber(Int):
+class PositiveOrZeroInt(Int):
 
     def __init__(self, value: int):
         super().__init__(value)
