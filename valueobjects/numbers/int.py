@@ -12,15 +12,28 @@ class Int(ValueObject):
 
     @classmethod
     def from_float(cls, value: float):
+        if type(value) != float:
+            raise ValueObjectError('Input type should be float.')
+
+        if not value.is_integer():
+            raise ValueObjectError('Input type should be float without decimals.')
+
         try:
             return cls(int(value))
         except Exception as _:
-            raise ValueObjectError('Input type should valid float.')
+            raise ValueObjectError('Input type should be valid float.')
 
     @classmethod
     def from_str(cls, value: str):
         try:
-            return cls(int(value))
+            decimal_value = float(value)
+
+            if not decimal_value.is_integer():
+                raise ValueObjectError('Input type shouldnot have decimals.')
+
+            int_value = int(decimal_value)
+
+            return cls(int_value)
         except Exception as _:
             raise ValueObjectError('Input type should be number format string.')
 
