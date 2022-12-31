@@ -17,6 +17,18 @@ class TestIntValueObject(unittest.TestCase):
         vo = Int.from_float(39.0)
         self.assertEqual(39, vo.value())
 
+    def test_zero_value_return_input_value(self):
+        vo = Int(0)
+        self.assertEqual(0, vo.value())
+
+    def test_zero_from_string_method_returns_int(self):
+        vo = Int.from_str('0')
+        self.assertEqual(0, vo.value())
+
+    def test_zero_from_float_method_returns_int(self):
+        vo = Int.from_float(0.0)
+        self.assertEqual(0, vo.value())
+
     def test_negative_value_return_input_value(self):
         vo = Int(-39)
         self.assertEqual(-39, vo.value())
