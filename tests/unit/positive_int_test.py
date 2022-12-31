@@ -1,7 +1,6 @@
 import unittest
 
 from valueobjects.errors.ValueObjectError import ValueObjectError
-from valueobjects.numbers.int import Int
 from valueobjects.numbers.positive_int import PositiveInt
 
 
