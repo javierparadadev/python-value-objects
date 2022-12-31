@@ -6,7 +6,7 @@ class Int(ValueObject):
 
     _ALLOWED_INPUT_TYPES = {str, int, float}
 
-    def __init__(self, value: int | str | float):
+    def __init__(self, value: int):
         super().__init__(value)
         self._validate(value)
 
@@ -26,12 +26,5 @@ class Int(ValueObject):
 
     def _validate(self, value):
         input_type = type(value)
-
-        if input_type not in Int._ALLOWED_INPUT_TYPES:
-            raise ValueObjectError(f'Input type should be: {Int._ALLOWED_INPUT_TYPES}.')
-
-        if input_type in {str, float}:
-            try:
-                int(value)
-            except Exception as _:
-                raise ValueObjectError('Input cannot be converted to integer.')
+        if input_type != int:
+            raise ValueObjectError(f'Input type should be: int.')
