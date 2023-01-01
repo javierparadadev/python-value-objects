@@ -1,7 +1,7 @@
 import unittest
 
-from valueobjects.errors.ValueObjectError import ValueObjectError
-from valueobjects.numbers.positive_or_zero_int import PositiveOrZeroInt
+from pyvalueobjects.errors.ValueObjectError import ValueObjectError
+from pyvalueobjects.numbers.positive_or_zero_int import PositiveOrZeroInt
 
 
 class TestPositiveIntValueObject(unittest.TestCase):

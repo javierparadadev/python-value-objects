@@ -1,7 +1,7 @@
 import unittest
 
-from valueobjects.errors.ValueObjectError import ValueObjectError
-from valueobjects.numbers.int import Int
+from pyvalueobjects.errors.ValueObjectError import ValueObjectError
+from pyvalueobjects.numbers.int import Int
 
 
 class TestIntValueObject(unittest.TestCase):
