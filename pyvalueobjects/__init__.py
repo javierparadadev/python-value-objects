@@ -1,4 +1,14 @@
-from pyvalueobjects.value_object import ValueObject
+# ----------------------------
+# ---------- Basics ----------
+# ----------------------------
+
+from pyvalueobjects.abstract.valueobject import ValueObject
+from pyvalueobjects.errors.ValueObjectError import ValueObjectError
+
+
+# -----------------------------
+# ---------- Numbers ----------
+# -----------------------------
 
 from pyvalueobjects.numbers.int import Int
 from pyvalueobjects.numbers.positive_int import PositiveInt
