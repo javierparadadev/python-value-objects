@@ -1,5 +1,5 @@
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
-from pyvalueobjects.value_object import ValueObject
+from pyvalueobjects.abstract.valueobject import ValueObject
 
 
 class Int(ValueObject):
