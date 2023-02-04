@@ -60,3 +60,6 @@ class TestIntValueObject(unittest.TestCase):
 
     def test_from_str_negative_number_with_decimals_raises_error(self):
         self.assertRaises(ValueObjectError, Int.from_float, '-39.1')
+
+    def test_none_raise_error(self):
+        self.assertRaises(ValueObjectError, Int, None)
