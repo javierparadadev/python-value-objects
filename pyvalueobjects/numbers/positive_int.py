@@ -1,8 +1,8 @@
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
-from pyvalueobjects.numbers.int import Int
+from pyvalueobjects.numbers.positive_or_zero_int import PositiveOrZeroInt
 
 
-class PositiveInt(Int):
+class PositiveInt(PositiveOrZeroInt):
 
     def __init__(self, value: int):
         super().__init__(value)
