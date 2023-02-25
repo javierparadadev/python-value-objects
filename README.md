@@ -14,6 +14,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [Nullable Int](#nullable-int)
   * [String value-objects](#string-value-objects)
     * [String](#string)
+    * [Nullable String](#nullable-string)
 
 
 # Value-objects
@@ -64,4 +65,22 @@ my_str = String('potato')
 
 # Getting raw value
 my_str.value() # returns -> 'potato'
+```
+
+### Nullable String
+
+```python
+from pyvalueobjects import NullableString
+
+# Creation
+my_str = NullableString('potato')
+
+# Getting raw value
+my_str.value() # returns -> 'potato'
+
+# Creation
+my_nullable_str = NullableString(None)
+
+# Getting raw value
+my_nullable_str.value() # returns -> None
 ```
