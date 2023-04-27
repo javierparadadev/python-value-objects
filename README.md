@@ -1,3 +1,5 @@
+![](./assets/logo.png)
+
 # Python Value-Objects
 
 ![](https://img.shields.io/badge/PRs-welcome-green.svg)
