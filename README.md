@@ -1,4 +1,4 @@
-![](./assets/logo.png)
+![](https://raw.githubusercontent.com/jparadadev/python-value-objects/main/assets/logo.png)
 
 # Python Value-Objects
 
