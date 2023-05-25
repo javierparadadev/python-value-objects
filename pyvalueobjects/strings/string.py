@@ -2,19 +2,18 @@ from pyvalueobjects.abstract.valueobject import ValueObject
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
 
 
-def _validate(value):
-    input_type = type(value)
-    if input_type != str:
-        raise ValueObjectError(f'Input type should be: str.')
-
-
 class String(ValueObject):
 
     _ALLOWED_INPUT_TYPES = {str, int, float, bool}
 
     def __init__(self, value: str):
         super().__init__(value)
-        _validate(value)
+        self._validate(value)
+
+    def _validate(self, value):
+        input_type = type(value)
+        if input_type != str:
+            raise ValueObjectError(f'Input type should be: str.')
 
     @classmethod
     def from_float(cls, value: float):
