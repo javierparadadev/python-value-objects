@@ -11,3 +11,6 @@ class ValueObject(ABC):
 
     def str_value(self) -> str:
         return str(self._value)
+
+    def _validate(self, value):
+        pass
