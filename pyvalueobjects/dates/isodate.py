@@ -1,10 +1,10 @@
 import datetime
 
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
-from pyvalueobjects.strings.non_empty_string import NonEmptyString
+from pyvalueobjects.strings.string import String
 
 
-class IsoDate(NonEmptyString):
+class IsoDate(String):
 
     def __init__(self, value: str):
         super().__init__(value)
