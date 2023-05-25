@@ -9,5 +9,6 @@ class PositiveOrZeroInt(Int):
         self._validate(value)
 
     def _validate(self, value):
+        super()._validate(value)
         if value < 0:
             raise ValueObjectError('Value must be greater or equals to 0.')

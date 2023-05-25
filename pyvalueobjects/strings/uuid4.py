@@ -11,6 +11,7 @@ class Uuid4(NonEmptyString):
         self._validate(value)
 
     def _validate(self, value):
+        super()._validate(value)
         try:
             uuid.UUID(str(value), version=4)
         except ValueError:

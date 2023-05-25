@@ -11,6 +11,7 @@ class String(ValueObject):
         self._validate(value)
 
     def _validate(self, value):
+        super()._validate(value)
         input_type = type(value)
         if input_type != str:
             raise ValueObjectError(f'Input type should be: str.')

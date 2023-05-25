@@ -38,6 +38,7 @@ class Int(ValueObject):
             raise ValueObjectError('Input type should be number format string.')
 
     def _validate(self, value):
+        super()._validate(value)
         input_type = type(value)
         if input_type != int:
             raise ValueObjectError(f'Input type should be: int.')

@@ -9,5 +9,6 @@ class NegativeInt(NegativeOrZeroInt):
         self._validate(value)
 
     def _validate(self, value):
+        super()._validate(value)
         if value >= 0:
             raise ValueObjectError('Value must be less than 0.')

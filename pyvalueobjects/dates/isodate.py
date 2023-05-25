@@ -11,6 +11,7 @@ class IsoDate(String):
         self._validate(value)
 
     def _validate(self, value):
+        super()._validate(value)
         try:
             datetime.datetime.fromisoformat(value)
         except ValueError:
