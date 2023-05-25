@@ -1,0 +1,22 @@
+@startuml
+
+title Value Objects - Class Diagram
+
+package Numbers <<Node>> {
+  class Int
+  class PositiveOrZeroInt
+  class PositiveInt
+  class NegativeOrZeroInt
+  class NegativeInt
+
+  Int <|-down- PositiveOrZeroInt
+  Int <|-down- NegativeOrZeroInt
+  PositiveOrZeroInt <|-down- PositiveInt
+  NegativeOrZeroInt <|-down- NegativeInt
+}
+
+package Strings <<Node>> {
+  class String
+}
+
+@enduml
