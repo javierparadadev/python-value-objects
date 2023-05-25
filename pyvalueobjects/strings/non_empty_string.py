@@ -6,7 +6,6 @@ class NonEmptyString(String):
 
     def __init__(self, value: str):
         super().__init__(value)
-        self._validate(value)
 
     def _validate(self, value):
         if value == '':

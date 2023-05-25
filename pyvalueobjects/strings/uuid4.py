@@ -8,7 +8,6 @@ class Uuid4(NonEmptyString):
 
     def __init__(self, value):
         super().__init__(value)
-        self._validate(value)
 
     def _validate(self, value):
         super()._validate(value)

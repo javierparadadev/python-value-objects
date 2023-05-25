@@ -8,7 +8,6 @@ class Int(ValueObject):
 
     def __init__(self, value: int):
         super().__init__(value)
-        self._validate(value)
 
     @classmethod
     def from_float(cls, value: float):
