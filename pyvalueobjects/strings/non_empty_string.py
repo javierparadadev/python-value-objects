@@ -8,5 +8,6 @@ class NonEmptyString(String):
         super().__init__(value)
 
     def _validate(self, value):
+        super()._validate(value)
         if value == '':
             raise ValueObjectError('Value must be a non empty string.')
