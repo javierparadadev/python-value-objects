@@ -27,6 +27,7 @@ from pyvalueobjects.strings.string import String
 from pyvalueobjects.strings.nullable_string import NullableString
 from pyvalueobjects.strings.non_empty_string import NonEmptyString
 from pyvalueobjects.strings.uuid4 import Uuid4
+from pyvalueobjects.strings.nullable_uuid4 import NullableUuid4
 
 
 # -----------------------------
