@@ -6,9 +6,7 @@ from pyvalueobjects.strings.non_empty_string import NonEmptyString
 
 class Cpe(NonEmptyString):
 
-    __MATCHER = re.compile(
-        r'^cpe:/[aho]:[-a-zA-Z0-9._~%:@!$&\'()*+,;=]+(:[-a-zA-Z0-9._~%:@!$&\'()*+,;=]+)*(:[a-zA-Z0-9._~%:@!$&\'()*+,;=]'
-        r'+)*(:[a-zA-Z0-9._~%:@!$&\'()*+,;=]+)*(:[a-zA-Z0-9._~%:@!$&\'()*+,;=]+)*(:[a-zA-Z0-9._~%:@!$&\'()*+,;=]+)*$')
+    __MATCHER = re.compile("^(?i)cpe:(/|\\d+\\.\\d+)[^:]*:?[^:]*:?[^:]*:?[^:]*:?[^:]*:?[^:]*:?[^:]*$")
 
     def __init__(self, value):
         super().__init__(value)
