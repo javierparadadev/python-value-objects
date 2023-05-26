@@ -14,7 +14,9 @@ class CveId(NonEmptyString):
     def _validate(self, value: str):
         super()._validate(value)
         try:
-            CveId.__MATCHER.match(value)
+            is_correct = CveId.__MATCHER.match(value)
+            if not is_correct:
+                raise ValueObjectError('Value must be valid a CVE id format string.')
         except ValueError:
             raise ValueObjectError('Value must be valid a CVE id format string.')
 
