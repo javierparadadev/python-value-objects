@@ -6,7 +6,7 @@ from pyvalueobjects.strings.non_empty_string import NonEmptyString
 
 class Uuid4(NonEmptyString):
 
-    def __init__(self, value):
+    def __init__(self, value: str):
         super().__init__(value)
 
     def _validate(self, value):

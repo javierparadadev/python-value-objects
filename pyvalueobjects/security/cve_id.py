@@ -8,7 +8,7 @@ class CveId(NonEmptyString):
 
     __MATCHER = re.compile(r'^CVE-\d{4}-\d{4,}$')
 
-    def __init__(self, value):
+    def __init__(self, value: str):
         super().__init__(value)
 
     def _validate(self, value: str):
