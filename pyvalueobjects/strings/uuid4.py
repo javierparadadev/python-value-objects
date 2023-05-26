@@ -14,4 +14,4 @@ class Uuid4(NonEmptyString):
         try:
             uuid.UUID(str(value), version=4)
         except ValueError:
-            raise ValueObjectError('Value must be valid a uuid4 format string.')
+            raise ValueObjectError('Value must be valid a uuid4 format strings.')

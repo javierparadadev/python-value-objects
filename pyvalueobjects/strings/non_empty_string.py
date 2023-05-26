@@ -10,4 +10,4 @@ class NonEmptyString(String):
     def _validate(self, value):
         super()._validate(value)
         if value == '':
-            raise ValueObjectError('Value must be a non empty string.')
+            raise ValueObjectError('Value must be a non empty strings.')

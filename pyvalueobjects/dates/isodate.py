@@ -14,4 +14,4 @@ class IsoDate(String):
         try:
             datetime.datetime.fromisoformat(value)
         except ValueError:
-            raise ValueObjectError('Value must be valid a iso date format string.')
+            raise ValueObjectError('Value must be valid a iso date format strings.')

@@ -16,7 +16,7 @@ class CveId(NonEmptyString):
         try:
             is_correct = CveId.__MATCHER.match(value)
             if not is_correct:
-                raise ValueObjectError('Value must be valid a CVE id format string.')
+                raise ValueObjectError('Value must be valid a CVE id format strings.')
         except ValueError:
-            raise ValueObjectError('Value must be valid a CVE id format string.')
+            raise ValueObjectError('Value must be valid a CVE id format strings.')
 

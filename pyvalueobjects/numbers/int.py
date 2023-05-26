@@ -34,7 +34,7 @@ class Int(ValueObject):
 
             return cls(int_value)
         except Exception as _:
-            raise ValueObjectError('Input type should be number format string.')
+            raise ValueObjectError('Input type should be number format strings.')
 
     def _validate(self, value):
         super()._validate(value)

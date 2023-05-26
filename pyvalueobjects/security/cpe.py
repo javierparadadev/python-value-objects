@@ -18,7 +18,7 @@ class Cpe(NonEmptyString):
         try:
             is_correct = Cpe.__MATCHER.match(value)
             if not is_correct:
-                raise ValueObjectError('Value must be valid a CPE format string.')
+                raise ValueObjectError('Value must be valid a CPE format strings.')
         except ValueError:
-            raise ValueObjectError('Value must be valid a CPE format string.')
+            raise ValueObjectError('Value must be valid a CPE format strings.')
 
