@@ -2,7 +2,6 @@ import unittest
 
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
 from pyvalueobjects.security.cpe import Cpe
-from pyvalueobjects.security.cve_id import CveId
 
 
 class TestCveIdValueObject(unittest.TestCase):
