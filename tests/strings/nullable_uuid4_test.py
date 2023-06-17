@@ -13,7 +13,7 @@ class TestNullableUuid4ValueObject(unittest.TestCase):
 
     def test_none_return_none(self):
         vo = NullableUuid4(None)
-        self.assertTrue(vo.value() is None)
+        self.assertIs(vo.value(), None)
 
     def test_empty_string_raise_error(self):
         self.assertRaises(ValueObjectError, NullableUuid4, '')
