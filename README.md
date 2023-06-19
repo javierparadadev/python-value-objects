@@ -22,6 +22,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [String](#string)
     * [Nullable String](#nullable-string)
     * [Uuid4](#uuid4)
+    * [Nullable Uuid4](#nullable-uuid4)
 
 
 # Value-objects
@@ -102,4 +103,18 @@ my_uuid4 = Uuid4('6c7add12-bf35-459e-a6c5-3178a2a33011')
 
 # Getting raw value
 my_uuid4.value()  # returns -> '6c7add12-bf35-459e-a6c5-3178a2a33011'
+```
+
+### Nullable Uuid4
+
+```python
+from pyvalueobjects import NullableUuid4
+
+# Creation
+my_uuid4 = NullableUuid4('6c7add12-bf35-459e-a6c5-3178a2a33011')
+my_null_uuid4 = NullableUuid4(None)
+
+# Getting raw value
+my_uuid4.value()  # returns -> '6c7add12-bf35-459e-a6c5-3178a2a33011'
+my_null_uuid4.value()  # returns -> 'None'
 ```
