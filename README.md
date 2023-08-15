@@ -23,7 +23,8 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [Nullable String](#nullable-string)
     * [Uuid4](#uuid4)
     * [Nullable Uuid4](#nullable-uuid4)
-
+  * [Date value-objects](#date-value-objects)
+    * [ISO Date](#iso-date)
 
 # Value-objects
 
@@ -117,4 +118,18 @@ my_null_uuid4 = NullableUuid4(None)
 # Getting raw value
 my_uuid4.value()  # returns -> '6c7add12-bf35-459e-a6c5-3178a2a33011'
 my_null_uuid4.value()  # returns -> 'None'
+```
+
+## Date value-objects
+
+### ISO Date
+
+```python
+from pyvalueobjects import IsoDate
+
+# Creation
+my_date = IsoDate('2023-08-15T04:55:12.076Z')
+
+# Getting raw value
+my_date.value()  # returns -> '2023-08-15T04:55:12.076Z'
 ```
