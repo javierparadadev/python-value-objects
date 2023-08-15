@@ -19,3 +19,6 @@ class TestUuid4ValueObject(unittest.TestCase):
 
     def test_random_string_raise_error(self):
         self.assertRaises(ValueObjectError, Uuid4, 'patata')
+
+    def test_old_uuid_version_raise_error(self):
+        self.assertRaises(ValueObjectError, Uuid4, uuid.uuid1())
