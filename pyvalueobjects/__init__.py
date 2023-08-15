@@ -31,7 +31,7 @@ from pyvalueobjects.strings.nullable_uuid4 import NullableUuid4
 
 
 # -----------------------------
-# ---------- Time ----------
+# ---------- Time -------------
 # -----------------------------
 
 from pyvalueobjects.dates.isodate import IsoDate
