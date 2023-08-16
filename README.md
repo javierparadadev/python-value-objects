@@ -94,6 +94,42 @@ my_nullable_str = NullableString(None)
 my_nullable_str.value() # returns -> None
 ```
 
+### Non Empty String
+
+```python
+from pyvalueobjects import NonEmptyString
+
+# Creation
+my_str = NonEmptyString('potato')
+
+# Getting raw value
+my_str.value() # returns -> 'potato'
+
+# Creation
+my_str2 = NonEmptyString('') # raises error
+```
+
+### Nullable non Empty String
+
+```python
+from pyvalueobjects import NullableNonEmptyString
+
+# Creation
+my_str = NullableNonEmptyString('potato')
+
+# Getting raw value
+my_str.value() # returns -> 'potato'
+
+# Creation
+my_str2 = NullableNonEmptyString(None)
+
+# Getting raw value
+my_str2.value() # returns -> None
+
+# Creation
+my_str3 = NullableNonEmptyString('') # raises error
+```
+
 ### Uuid4
 
 ```python
