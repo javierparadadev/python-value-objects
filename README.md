@@ -25,6 +25,8 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [Nullable Uuid4](#nullable-uuid4)
   * [Date value-objects](#date-value-objects)
     * [ISO Date](#iso-date)
+  * [Security value-objects](#security-value-objects)
+    * [CVE](#cve)
 
 # Value-objects
 
@@ -168,4 +170,18 @@ my_date = IsoDate('2023-08-15T04:55:12.076Z')
 
 # Getting raw value
 my_date.value()  # returns -> '2023-08-15T04:55:12.076Z'
+```
+
+## Security value-objects
+
+### CVE
+
+```python
+from pyvalueobjects import Cve
+
+# Creation
+my_cve = Cve('CVE-2014-9418')
+
+# Getting raw value
+my_cve.value()  # returns -> 'CVE-2014-9418'
 ```
