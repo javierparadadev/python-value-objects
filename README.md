@@ -29,6 +29,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [CVE](#cve)
     * [Nullable CVE](#nullable-cve)
     * [CPE](#cpe)
+    * [Nullable CPE](#nullable-cpe)
 
 # Value-objects
 
@@ -212,4 +213,18 @@ my_cpe = Cpe('cpe:/a:openjdk:openjdk:8u282')
 
 # Getting raw value
 my_cpe.value()  # returns -> 'cpe:/a:openjdk:openjdk:8u282'
+```
+
+### Nullable CPE
+
+```python
+from pyvalueobjects import NullableCpe
+
+# Creation
+my_cpe = NullableCpe('cpe:/a:openjdk:openjdk:8u282')
+my_null_cpe = NullableCpe(None)
+
+# Getting raw value
+my_cpe.value()  # returns -> 'cpe:/a:openjdk:openjdk:8u282'
+my_null_cpe.value()  # returns -> None
 ```
