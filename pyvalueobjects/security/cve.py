@@ -4,7 +4,7 @@ from pyvalueobjects.errors.ValueObjectError import ValueObjectError
 from pyvalueobjects.strings.non_empty_string import NonEmptyString
 
 
-class CveId(NonEmptyString):
+class Cve(NonEmptyString):
 
     __MATCHER = re.compile(r'^CVE-\d{4}-\d{4,}$')
 
@@ -14,7 +14,7 @@ class CveId(NonEmptyString):
     def _validate(self, value: str):
         super()._validate(value)
         try:
-            is_correct = CveId.__MATCHER.match(value)
+            is_correct = Cve.__MATCHER.match(value)
             if not is_correct:
                 raise ValueObjectError('Value must be valid a CVE id format strings.')
         except ValueError:
