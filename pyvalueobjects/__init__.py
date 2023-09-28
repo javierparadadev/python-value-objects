@@ -41,3 +41,4 @@ from pyvalueobjects.dates.isodate import IsoDate
 # -----------------------------
 
 from pyvalueobjects.security.cve import Cve
+from pyvalueobjects.security.cpe import Cpe
