@@ -35,3 +35,9 @@ from pyvalueobjects.strings.nullable_uuid4 import NullableUuid4
 # -----------------------------
 
 from pyvalueobjects.dates.isodate import IsoDate
+
+# -----------------------------
+# -------- Security -----------
+# -----------------------------
+
+from pyvalueobjects.security.cve import Cve
