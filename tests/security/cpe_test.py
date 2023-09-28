@@ -4,7 +4,7 @@ from pyvalueobjects.errors.ValueObjectError import ValueObjectError
 from pyvalueobjects.security.cpe import Cpe
 
 
-class TestCveIdValueObject(unittest.TestCase):
+class TestCpeIdValueObject(unittest.TestCase):
     def test_value_return_input_value(self):
         vo = Cpe('cpe:/a:openjdk:openjdk:8u282')
         self.assertEqual('cpe:/a:openjdk:openjdk:8u282', vo.value())
