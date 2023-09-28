@@ -27,6 +27,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [ISO Date](#iso-date)
   * [Security value-objects](#security-value-objects)
     * [CVE](#cve)
+    * [CPE](#cpe)
 
 # Value-objects
 
@@ -184,4 +185,16 @@ my_cve = Cve('CVE-2014-9418')
 
 # Getting raw value
 my_cve.value()  # returns -> 'CVE-2014-9418'
+```
+
+### CPE
+
+```python
+from pyvalueobjects import Cpe
+
+# Creation
+my_cpe = Cpe('cpe:/a:openjdk:openjdk:8u282')
+
+# Getting raw value
+my_cpe.value()  # returns -> 'cpe:/a:openjdk:openjdk:8u282'
 ```
