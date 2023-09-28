@@ -27,6 +27,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [ISO Date](#iso-date)
   * [Security value-objects](#security-value-objects)
     * [CVE](#cve)
+    * [Nullable CVE](#nullable-cve)
     * [CPE](#cpe)
 
 # Value-objects
@@ -185,6 +186,20 @@ my_cve = Cve('CVE-2014-9418')
 
 # Getting raw value
 my_cve.value()  # returns -> 'CVE-2014-9418'
+```
+
+### Nullable CVE
+
+```python
+from pyvalueobjects import NullableCve
+
+# Creation
+my_cve = NullableCve('CVE-2014-9418')
+my_null_cve = NullableCve(None)
+
+# Getting raw value
+my_cve.value()  # returns -> 'CVE-2014-9418'
+my_null_cve.value()  # returns -> None
 ```
 
 ### CPE
