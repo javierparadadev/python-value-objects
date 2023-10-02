@@ -1,4 +1,6 @@
-from typing import TypeVar, Generic
+from __future__ import annotations
+
+from typing import TypeVar
 
 from pyvalueobjects.abstract.valueobject import ValueObject
 from pyvalueobjects.errors.ValueObjectError import ValueObjectError
