@@ -27,6 +27,7 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [ISO Date](#iso-date)
   * [Data Structures value-objects](#data-structures-value-objects)
     * [ArrayList](#arraylist)
+    * [NullableArrayList](#nullable-arraylist)
   * [Security value-objects](#security-value-objects)
     * [CVE](#cve)
     * [Nullable CVE](#nullable-cve)
@@ -190,6 +191,21 @@ my_int_array = ArrayList(Int)([39])
 
 # Getting raw value
 my_int_array.value()  # returns -> [39]
+```
+
+### Nullable ArrayList
+
+```python
+from pyvalueobjects import ArrayList
+from pyvalueobjects import Int
+
+# Creation
+my_int_array = ArrayList(Int)([39])
+my_null_array = ArrayList(Int)(None)
+
+# Getting raw value
+my_int_array.value()  # returns -> [39]
+my_null_array.value()  # returns -> None
 ```
 
 ## Security value-objects
