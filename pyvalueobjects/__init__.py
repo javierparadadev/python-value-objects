@@ -41,6 +41,7 @@ from pyvalueobjects.dates.isodate import IsoDate
 # -----------------------------
 
 from pyvalueobjects.lists.array_list import ArrayList
+from pyvalueobjects.lists.nullable_array_list import NullableArrayList
 
 # -----------------------------
 # -------- Security -----------
