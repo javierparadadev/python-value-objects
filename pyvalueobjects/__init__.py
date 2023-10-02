@@ -40,7 +40,7 @@ from pyvalueobjects.dates.isodate import IsoDate
 # ------ Data Structures ------
 # -----------------------------
 
-from pyvalueobjects.lists.ArrayList import ArrayList
+from pyvalueobjects.lists.array_list import ArrayList
 
 # -----------------------------
 # -------- Security -----------

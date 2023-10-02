@@ -1,6 +1,6 @@
 import unittest
 
-from pyvalueobjects.lists.ArrayList import ArrayList
+from pyvalueobjects.lists.array_list import ArrayList
 from pyvalueobjects.numbers.int import Int
 from pyvalueobjects.strings.string import String
 
