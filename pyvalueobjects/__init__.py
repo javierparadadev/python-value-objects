@@ -37,6 +37,12 @@ from pyvalueobjects.strings.nullable_uuid4 import NullableUuid4
 from pyvalueobjects.dates.isodate import IsoDate
 
 # -----------------------------
+# ------ Data Structures ------
+# -----------------------------
+
+from pyvalueobjects.lists.ArrayList import ArrayList
+
+# -----------------------------
 # -------- Security -----------
 # -----------------------------
 
