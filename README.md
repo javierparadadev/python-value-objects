@@ -25,6 +25,8 @@ A collection of Value Objects to save time by generalizing types and format vali
     * [Nullable Uuid4](#nullable-uuid4)
   * [Date value-objects](#date-value-objects)
     * [ISO Date](#iso-date)
+  * [Data Structures value-objects](#data-structures-value-objects)
+    * [ArrayList](#arraylist)
   * [Security value-objects](#security-value-objects)
     * [CVE](#cve)
     * [Nullable CVE](#nullable-cve)
@@ -173,6 +175,21 @@ my_date = IsoDate('2023-08-15T04:55:12.076Z')
 
 # Getting raw value
 my_date.value()  # returns -> '2023-08-15T04:55:12.076Z'
+```
+
+## Data structures value-objects
+
+### ArrayList
+
+```python
+from pyvalueobjects import ArrayList
+from pyvalueobjects import Int
+
+# Creation
+my_int_array = ArrayList(Int)([39])
+
+# Getting raw value
+my_int_array.value()  # returns -> [39]
 ```
 
 ## Security value-objects
