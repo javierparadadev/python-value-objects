@@ -1,5 +1,7 @@
 from abc import ABC
 
+from pyvalueobjects.errors.ValueObjectError import ValueObjectError
+
 
 class ValueObject(ABC):
 
@@ -15,3 +17,13 @@ class ValueObject(ABC):
 
     def _validate(self, value):
         pass
+
+    def __hash__(self):
+        return hash(self._value)
+
+    def __eq__(self, other):
+        if not isinstance(other, ValueObject):
+            raise ValueObjectError('Comparing with a non value object.')
+        return self._value == other.value()
+
+
