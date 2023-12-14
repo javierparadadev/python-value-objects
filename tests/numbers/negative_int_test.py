@@ -5,6 +5,21 @@ from pyvalueobjects.numbers.negative_int import NegativeInt
 
 
 class TestNegativeIntValueObject(unittest.TestCase):
+
+    def __init__(self, *args):
+        super().__init__(*args)
+        self._cls = NegativeInt
+
+    def test_vo_equal_hash(self):
+        original_vo_hash = hash(self._cls(-39))
+        equal_vo_hash = hash(self._cls(-39))
+        self.assertEqual(original_vo_hash, equal_vo_hash)
+
+    def test_vo_different_hash(self):
+        original_vo_hash = hash(self._cls(-39))
+        not_equal_vo_hash = hash(self._cls(-93))
+        self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
+
     def test_value_raises_error(self):
         self.assertRaises(ValueObjectError, NegativeInt, 39)
 
