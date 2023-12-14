@@ -20,6 +20,16 @@ class TestNullablePositiveIntValueObject(unittest.TestCase):
         not_equal_vo_hash = hash(self._cls(93))
         self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
 
+    def test_vo_equality(self):
+        original_vo = self._cls(39)
+        equal_vo = self._cls(39)
+        self.assertEqual(original_vo, equal_vo)
+
+    def test_vo_different_equality(self):
+        original_vo = self._cls(39)
+        different_vo = self._cls(97)
+        self.assertNotEqual(original_vo, different_vo)
+
     def test_value_return_input_value(self):
         vo = NullablePositiveOrZeroInt(39)
         self.assertEqual(39, vo.value())
