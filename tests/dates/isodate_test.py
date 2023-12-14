@@ -13,9 +13,8 @@ class TestIsoDateValueObject(unittest.TestCase):
 
     def test_vo_equal_hash(self):
         the_date = datetime.datetime.now().isoformat()
-        equal_date = datetime.datetime.now().isoformat()
         original_vo_hash = hash(self._cls(the_date))
-        equal_vo_hash = hash(self._cls(equal_date))
+        equal_vo_hash = hash(self._cls(the_date))
         self.assertEqual(original_vo_hash, equal_vo_hash)
 
     def test_vo_different_hash(self):
