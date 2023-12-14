@@ -15,6 +15,11 @@ class TestPositiveIntValueObject(unittest.TestCase):
         equal_vo_hash = hash(self._cls(39))
         self.assertEqual(original_vo_hash, equal_vo_hash)
 
+    def test_vo_different_hash(self):
+        original_vo_hash = hash(self._cls(39))
+        not_equal_vo_hash = hash(self._cls(93))
+        self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
+
     def test_value_return_input_value(self):
         vo = PositiveOrZeroInt(39)
         self.assertEqual(39, vo.value())
