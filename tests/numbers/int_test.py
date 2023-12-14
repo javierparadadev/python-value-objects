@@ -17,7 +17,7 @@ class TestIntValueObject(unittest.TestCase):
 
     def test_vo_different_hash(self):
         original_vo_hash = hash(self._cls(39))
-        not_equal_vo_hash = hash(self._cls(93))
+        not_equal_vo_hash = hash(self._cls(97))
         self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
 
     def test_value_return_input_value(self):
