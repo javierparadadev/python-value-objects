@@ -5,6 +5,16 @@ from pyvalueobjects.numbers.nullable_negative_int import NullableNegativeInt
 
 
 class TestNullableNegativeIntValueObject(unittest.TestCase):
+
+    def __init__(self, *args):
+        super().__init__(*args)
+        self._cls = NullableNegativeInt
+
+    def test_vo_equal_hash(self):
+        original_vo_hash = hash(self._cls(-39))
+        equal_vo_hash = hash(self._cls(-39))
+        self.assertEqual(original_vo_hash, equal_vo_hash)
+
     def test_value_raises_error(self):
         self.assertRaises(ValueObjectError, NullableNegativeInt, 39)
 
