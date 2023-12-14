@@ -19,7 +19,7 @@ class TestIsoDateValueObject(unittest.TestCase):
 
     def test_vo_different_hash(self):
         the_date = datetime.datetime.now().isoformat()
-        one_day_ago = (datetime.datetime.now() - datetime.timedelta(days=1)).isoformat()
+        one_day_ago = (datetime.datetime.now() + datetime.timedelta(days=1)).isoformat()
         original_vo_hash = hash(self._cls(the_date))
         not_equal_vo_hash = hash(self._cls(one_day_ago))
         self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
