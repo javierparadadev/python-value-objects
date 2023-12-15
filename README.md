@@ -18,6 +18,14 @@ A collection of Value Objects to save time by generalizing types and format vali
   * [Numeric value-objects](#numeric-value-objects)
     * [Int](#int)
     * [Nullable Int](#nullable-int)
+    * [Positive Int](#positive-int)
+    * [Nullable Positive Int](#positive-int)
+    * [Positive or zero Int](#positive-or-zero-int)
+    * [Nullable Positive or zero Int](#nullable-positive-or-zero-int)
+    * [Negative Int](#negative-int)
+    * [Nullable Negative Int](#nullable-negative-int)
+    * [Negative or zero Int](#negative-or-zero-int)
+    * [Nullable Negative or zero Int](#nullable-negative-or-zero-int)
   * [String value-objects](#string-value-objects)
     * [String](#string)
     * [Nullable String](#nullable-string)
@@ -67,6 +75,118 @@ my_nullable_integer = NullableInt(None)
 
 # Getting raw value
 my_integer.value() # returns -> 9
+my_nullable_integer.value() # returns -> None
+```
+
+### Positive Int
+
+```python
+from pyvalueobjects import PositiveInt
+
+# Creation
+my_integer = PositiveInt(9)
+
+# Getting raw value
+my_integer.value() # returns -> 9
+```
+
+### Nullable Positive Int
+
+```python
+from pyvalueobjects import NullablePositiveInt
+
+# Creation
+my_integer = NullablePositiveInt(9)
+
+# Creating from None
+my_nullable_integer = NullablePositiveInt(None)
+
+# Getting raw value
+my_integer.value() # returns -> 9
+my_nullable_integer.value() # returns -> None
+```
+
+### Positive Or Zero Int
+
+```python
+from pyvalueobjects import PositiveOrZeroInt
+
+# Creation
+my_integer = PositiveOrZeroInt(9)
+
+# Getting raw value
+my_integer.value() # returns -> 9
+```
+
+### Nullable Positive Or Zero Int
+
+```python
+from pyvalueobjects import NullablePositiveOrZeroInt
+
+# Creation
+my_integer = NullablePositiveOrZeroInt(9)
+
+# Creating from None
+my_nullable_integer = NullablePositiveOrZeroInt(None)
+
+# Getting raw value
+my_integer.value() # returns -> 9
+my_nullable_integer.value() # returns -> None
+```
+
+### Negative Int
+
+```python
+from pyvalueobjects import NegativeInt
+
+# Creation
+my_integer = NegativeInt(-9)
+
+# Getting raw value
+my_integer.value() # returns -> -9
+```
+
+### Nullable Negative Int
+
+```python
+from pyvalueobjects import NullableNegativeInt
+
+# Creation
+my_integer = NullableNegativeInt(-9)
+
+# Creating from None
+my_nullable_integer = NullableNegativeInt(None)
+
+# Getting raw value
+my_integer.value() # returns -> -9
+my_nullable_integer.value() # returns -> None
+```
+
+### Negative Or Zero Int
+
+```python
+from pyvalueobjects import NegativeOrZeroInt
+
+# Creation
+my_integer = NegativeOrZeroInt(-9)
+
+# Getting raw value
+my_integer.value() # returns -> -9
+```
+
+### Nullable Negative Or Zero Int
+
+```python
+from pyvalueobjects import NullableNegativeOrZeroInt
+
+# Creation
+my_integer = NullableNegativeOrZeroInt(-9)
+
+# Creating from None
+my_nullable_integer = NullableNegativeOrZeroInt(None)
+
+# Getting raw value
+my_integer.value() # returns -> -9
 my_nullable_integer.value() # returns -> None
 ```
 

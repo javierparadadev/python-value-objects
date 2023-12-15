@@ -17,6 +17,7 @@ from pyvalueobjects.numbers.nullable_negative_int import NullableNegativeInt
 from pyvalueobjects.numbers.nullable_negative_or_zero_int import NullableNegativeOrZeroInt
 from pyvalueobjects.numbers.nullable_positive_or_zero_int import NullablePositiveOrZeroInt
 from pyvalueobjects.numbers.positive_int import PositiveInt
+from pyvalueobjects.numbers.nullable_positive_int import NullablePositiveInt
 from pyvalueobjects.numbers.positive_or_zero_int import PositiveOrZeroInt
 
 # -----------------------------
