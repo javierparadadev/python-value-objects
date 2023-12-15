@@ -20,6 +20,16 @@ class TestStringValueObject(unittest.TestCase):
         not_equal_vo_hash = hash(self._cls('tomato'))
         self.assertNotEqual(original_vo_hash, not_equal_vo_hash)
 
+    def test_vo_equality(self):
+        original_vo = self._cls('patata')
+        equal_vo = self._cls('patata')
+        self.assertEqual(original_vo, equal_vo)
+
+    def test_vo_different_equality(self):
+        original_vo = self._cls('patata')
+        different_vo = self._cls('tomato')
+        self.assertNotEqual(original_vo, different_vo)
+
     def test_value_return_input_value(self):
         vo = String('')
         self.assertEqual('', vo.value())
