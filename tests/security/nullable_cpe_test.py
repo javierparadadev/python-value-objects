@@ -29,6 +29,7 @@ class TestNullableCpeValueObject(unittest.TestCase):
         original_vo = self._cls('cpe:/a:openjdk:openjdk:8u282')
         different_vo = self._cls('cpe:/o:microsoft:windows_10')
         self.assertNotEqual(original_vo, different_vo)
+
     def test_value_return_input_value(self):
         self.assertRaises(ValueObjectError, NullableCpe, '')
 
@@ -39,4 +40,3 @@ class TestNullableCpeValueObject(unittest.TestCase):
     def test_none_return_none(self):
         vo = NullableCpe(None)
         self.assertEqual(None, vo.value())
-
