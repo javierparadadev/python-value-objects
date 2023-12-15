@@ -5,8 +5,8 @@ from pyvalueobjects.strings.non_empty_string import NonEmptyString
 
 
 class Cpe(NonEmptyString):
-
-    __MATCHER = re.compile('^cpe:/[aho]:[a-z\d._~-]+:[a-z\d._~-]+(?::[a-z\d._~-]+)?(?::[a-z\d._~-]+)?(?:$|\:[a-z\d._~-]+)$')
+    __MATCHER = re.compile('^cpe:/[aho]:[a-z\d._~-]+:[a-z\d._~-]+(?::[a-z\d._~-]+)?(?::[a-z\d._~-]+)?(?:$|\:['
+                           'a-z\d._~-]+)$')
 
     def __init__(self, value: str):
         super().__init__(value)
@@ -19,4 +19,3 @@ class Cpe(NonEmptyString):
                 raise ValueObjectError('Value must be valid a CPE format strings.')
         except ValueError:
             raise ValueObjectError('Value must be valid a CPE format strings.')
-
